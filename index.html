@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Gymtech | Equipamiento Fox y Movement, Servicio Técnico en Gran Mendoza</title>
+<meta name="description" content="Gymtech: representante oficial de equipos Fox y Movement, y servicio técnico de mantenimiento y reparación de equipos de gimnasio a domicilio en Gran Mendoza.">
+<meta name="theme-color" content="#0a0a0c">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gymtech | Fox y Movement, servicio técnico en Gran Mendoza">
+<meta property="og:description" content="Representantes oficiales de Fox y Movement. Servicio técnico a domicilio en Gran Mendoza.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="Imagenes/Logo GYMTechRecortado.jpeg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="Imagenes/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="Imagenes/favicon-192.png">
+<link rel="apple-touch-icon" href="Imagenes/favicon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Evita el flash de video antes de aplicar prefers-reduced-motion -->
+<script>
+(function () {
+  try {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduced-motion');
+    }
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <img src="Imagenes/Logo GYMTechRecortado.jpeg" alt="" class="preloader__icon">
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#inicio" class="brand">
+      <img src="Imagenes/Logo GYMTechRecortado.jpeg" alt="Gymtech - Servicio Técnico, Ventas y Equipos" class="brand__logo">
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#inicio" class="nav__link active-link">Inicio</a></li>
+        <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+        <li><a href="#fox" class="nav__link">Equipos Fox</a></li>
+        <li><a href="#servicio" class="nav__link">Servicio Técnico</a></li>
+        <li><a href="#movement" class="nav__link">Movement</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+
+  <!-- Video de fondo del hero: autoplay, muted, loop. Se retira vía JS si prefers-reduced-motion. -->
+  <video
+    class="hero__video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="Imagenes/Maquinas-de-gimnasio-de-alta-tecnologia.jpg"
+    aria-hidden="true">
+    <source src="Videos/hero-gymyech1.mp4" type="video/mp4">
+  </video>
+
+  <!-- Fallback estático para prefers-reduced-motion -->
+  <img
+    class="hero__poster-fallback"
+    src="Imagenes/Maquinas-de-gimnasio-de-alta-tecnologia.jpg"
+    alt=""
+    aria-hidden="true">
+
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow reveal">Representantes oficiales de <span class="text-blue">FOX</span> y <span class="text-blue">MOVEMENT</span> en Mendoza</p>
+      <h1 class="hero__title reveal">
+        Soluciones que <span class="text-chrome">potencian</span><br>
+        tu <span class="text-blue">gimnasio</span>.
+      </h1>
+      <p class="hero__subtitle reveal">
+        Equipamos gimnasios y box de crossfit con máquinas Fox y Movement, y reparamos tu
+        equipamiento a domicilio en todo el Gran Mendoza.
+      </p>
+      <div class="hero__cta reveal">
+        <a href="#contacto" class="btn btn--primary">Solicitar servicio técnico</a>
+        <a href="#fox" class="btn btn--outline">Ver equipamiento</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Franja técnica funcional (no decorativa: son los datos reales del servicio) -->
+  <div class="hero__readout reveal" aria-label="Datos del servicio">
+    <div class="readout">
+      <span class="readout__value">2</span>
+      <span class="readout__label">Marcas oficiales representadas</span>
+    </div>
+    <div class="readout">
+      <span class="readout__value">6</span>
+      <span class="readout__label">Departamentos en Gran Mendoza</span>
+    </div>
+    <div class="readout">
+      <span class="readout__value">100%</span>
+      <span class="readout__label">Servicio a domicilio</span>
+    </div>
+    <div class="readout">
+      <span class="readout__value">24 hs</span>
+      <span class="readout__label">Tiempo de respuesta</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSOTROS (inmediatamente después del hero) ===== -->
+<section class="section" id="nosotros">
+  <div class="container about">
+    <div class="about__text reveal">
+      <h2 class="section-title">Nacimos para <span class="text-blue">potenciar</span> gimnasios</h2>
+      <p>
+        Gymtech es una empresa mendocina que combina venta de equipamiento y servicio técnico
+        especializado para el mundo del fitness. Somos representantes oficiales de <strong>Fox</strong>
+        y <strong>Movement</strong>, marcas líderes en equipamiento de musculación y cintas de correr profesionales.
+      </p>
+      <p>
+        Nuestro objetivo es simple: que gimnasios, box de crossfit, estudios y entrenadores
+        independientes de todo el Gran Mendoza tengan equipamiento de calidad y, cuando algo
+        falla, una respuesta técnica rápida y confiable, sin tener que mover una sola máquina.
+      </p>
+      <div class="about__pillars">
+        <div class="pillar">
+          <h4>Servicio</h4>
+          <p>Mantenimiento y reparación a domicilio</p>
+        </div>
+        <div class="pillar">
+          <h4>Equipos</h4>
+          <p>Máquinas Fox y cintas Movement</p>
+        </div>
+      </div>
+    </div>
+    <div class="about__visual reveal">
+      <!-- Foto: "Empty Interior of Gym" por hi room, Pexels (licencia Free) -->
+      <img src="Imagenes/nosotros-gym-interior.jpg" alt="Sala de musculación profesional con equipamiento de cardio y fuerza" class="about__icon">
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARCAS Y EQUIPOS QUE REPARAMOS ===== -->
+<section class="trustbar" id="marcas">
+  <div class="container">
+    <div class="trustbar__row">
+      <p class="trustbar__label">Representantes oficiales</p>
+      <div class="trustbar__brands">
+        <div class="brand-chip reveal">
+          <img src="Imagenes/Logo-FOX.jpeg" alt="Fox - Compañía de Fitness" class="brand-chip__logo">
+          <span class="brand-chip__tag">Equipamiento &amp; Máquinas</span>
+        </div>
+        <div class="brand-chip reveal">
+          <img src="Imagenes/Logo Movement.jpeg" alt="Movement Fitness" class="brand-chip__logo">
+          <span class="brand-chip__tag">Cintas de Correr Profesionales</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="trustbar__row">
+      <p class="trustbar__label">Equipos que reparamos</p>
+      <div class="pills reveal" role="list">
+        <span class="pill" role="listitem">Cintas de correr</span>
+        <span class="pill" role="listitem">Bicicletas fijas</span>
+        <span class="pill" role="listitem">Multigimnasios</span>
+        <span class="pill" role="listitem">Máquinas de fuerza</span>
+        <span class="pill" role="listitem">Elípticas</span>
+        <span class="pill" role="listitem">Escaladoras</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOX SECTION ===== -->
+<section class="section section--dark" id="fox">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title section-title--logo">Línea <img src="Imagenes/Logo-FOX.jpeg" alt="Fox" class="section-title__logo"></h2>
+      <p class="section-desc">
+        Somos representantes oficiales de Fox, compañía de fitness especializada en el diseño y
+        fabricación de equipamiento profesional. Racks, jaulas, máquinas de musculación,
+        rehabilitación y equipos para exteriores, con garantía, respaldo y funcionalidad real de fábrica.
+      </p>
+      <p class="section-note">
+        Esta es una selección de modelos. <a href="https://wa.me/5492610000000?text=Hola%20Gymtech%2C%20quiero%20consultar%20por%20otros%20equipos%20de%20la%20l%C3%ADnea%20Fox" target="_blank" rel="noopener">Consultá por el resto de la línea</a>.
+      </p>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <div class="carousel__track" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Catálogo de equipos Fox">
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/fox/cinta-runner-pro.webp" alt="Cinta Runner PRO, cinta de correr profesional Fox" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <span class="carousel-card__type carousel-card__type--cardio">Cardio</span>
+            <h3 class="carousel-card__name">Cinta Runner PRO</h3>
+            <p class="carousel-card__spec">Motor de 3 HP, de 1 a 20 km/h, banda de 1.55 x 0.59 m</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/fox/bicicleta-fx-55.webp" alt="Bicicleta Fija FX-55, indoor bike Fox" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <span class="carousel-card__type carousel-card__type--cardio">Cardio</span>
+            <h3 class="carousel-card__name">Bicicleta Fija FX-55</h3>
+            <p class="carousel-card__spec">Volante inercial de 20 kg, hasta 180 kg de usuario</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/fox/prensa-45.jpg" alt="Prensa 45°, máquina de fuerza línea Star Line Fox" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <span class="carousel-card__type carousel-card__type--fuerza">Fuerza</span>
+            <h3 class="carousel-card__name">Prensa 45°</h3>
+            <p class="carousel-card__spec">Estructura de caños ovalados exclusivos de FOX</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/fox/super-squat.webp" alt="Súper Squat, máquina de sentadillas línea FX Fox" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <span class="carousel-card__type carousel-card__type--fuerza">Fuerza</span>
+            <h3 class="carousel-card__name">Súper Squat</h3>
+            <p class="carousel-card__spec">Apoyo móvil para gemelos, línea FX a discos</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/fox/sillon-cuadriceps-fx-max.png" alt="Sillón de Cuádriceps FX-MAX, línea Omega Fox" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <span class="carousel-card__type carousel-card__type--fuerza">Fuerza</span>
+            <h3 class="carousel-card__name">Sillón de Cuádriceps FX-MAX</h3>
+            <p class="carousel-card__spec">Línea Omega a lingotes</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/fox/multipress-rotativo-fx.png" alt="Multipress Rotativo FX, línea Omega Fox" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <span class="carousel-card__type carousel-card__type--fuerza">Fuerza</span>
+            <h3 class="carousel-card__name">Multipress Rotativo FX</h3>
+            <p class="carousel-card__spec">Línea Omega a discos</p>
+          </div>
+        </article>
+
+        <article class="carousel-card carousel-card--cta">
+          <h3 class="carousel-card__cta-title">Catálogo completo Fox</h3>
+          <p class="carousel-card__cta-text">Hay más modelos de la línea Fox que no figuran en esta selección. Escribinos y te pasamos toda la información.</p>
+          <a href="https://wa.me/5492610000000?text=Hola%20Gymtech%2C%20quiero%20consultar%20por%20otros%20equipos%20de%20la%20l%C3%ADnea%20Fox" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.5 7.7 9.3 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.2.8.9-3.1-.2-.3C3.9 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.3-8.5 8.3z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </article>
+
+      </div>
+
+      <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Equipo Fox anterior">
+        <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="carousel__btn carousel__btn--next" type="button" aria-label="Equipo Fox siguiente">
+        <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MOVEMENT SECTION ===== -->
+<section class="section" id="movement">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title section-title--logo">Línea <img src="Imagenes/Logo Movement.jpeg" alt="Movement" class="section-title__logo"></h2>
+      <p class="section-desc">
+        Además de Fox, somos representantes de Movement: cintas de correr profesionales
+        pensadas para uso comercial intensivo en gimnasios y box de todo el Gran Mendoza.
+      </p>
+      <p class="section-note">
+        Esta es una selección de modelos. <a href="https://wa.me/5492610000000?text=Hola%20Gymtech%2C%20quiero%20consultar%20por%20otros%20equipos%20de%20la%20l%C3%ADnea%20Movement" target="_blank" rel="noopener">Consultá por el resto de la línea</a>.
+      </p>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <div class="carousel__track" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Catálogo de cintas Movement">
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/movement/up-run-plus.jpg" alt="Cinta Up Run+ Movement" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <h3 class="carousel-card__name">Up Run+</h3>
+            <p class="carousel-card__spec">Pantalla táctil de 23.8" Full HD, motor de 4.0 HP pico</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/movement/up-run.jpg" alt="Cinta Up Run Movement" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <h3 class="carousel-card__name">Up Run</h3>
+            <p class="carousel-card__spec">Hasta 22 km/h e inclinación de 0 a 15%</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/movement/x-4-6-tsi-plus.png" alt="Cinta X 4.6 TSI+ Movement" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <h3 class="carousel-card__name">X 4.6 TSI+</h3>
+            <p class="carousel-card__spec">Motor de 4.6 HP, hasta 25 km/h y 180 kg de usuario</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/movement/aria-iled-3.jpg" alt="Cinta Aria iLED 3.0 Movement" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <h3 class="carousel-card__name">Aria iLED 3.0</h3>
+            <p class="carousel-card__spec">Banda de carrera de 148 x 50 cm, inclinación hasta 15%</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/movement/t300i-connect.jpg" alt="Cinta T300i Connect Movement" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <h3 class="carousel-card__name">T300i Connect</h3>
+            <p class="carousel-card__spec">Plegable, ocupa solo 1.32 m² guardada</p>
+          </div>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-card__image">
+            <img src="Imagenes/movement/t300-connect.jpg" alt="Cinta T300 Connect Movement" loading="lazy">
+          </div>
+          <div class="carousel-card__body">
+            <h3 class="carousel-card__name">T300 Connect</h3>
+            <p class="carousel-card__spec">Compacta, hasta 100 kg de usuario</p>
+          </div>
+        </article>
+
+        <article class="carousel-card carousel-card--cta">
+          <h3 class="carousel-card__cta-title">Catálogo completo Movement</h3>
+          <p class="carousel-card__cta-text">Hay más modelos de la línea Movement que no figuran en esta selección. Escribinos y te pasamos toda la información.</p>
+          <a href="https://wa.me/5492610000000?text=Hola%20Gymtech%2C%20quiero%20consultar%20por%20otros%20equipos%20de%20la%20l%C3%ADnea%20Movement" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.5 7.7 9.3 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.2.8.9-3.1-.2-.3C3.9 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.3-8.5 8.3z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </article>
+
+      </div>
+
+      <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Cinta Movement anterior">
+        <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="carousel__btn carousel__btn--next" type="button" aria-label="Cinta Movement siguiente">
+        <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SERVICIO TECNICO SECTION ===== -->
+<section class="section section--dark" id="servicio">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Mantenimiento &amp; reparación</p>
+      <h2 class="section-title">Servicio Técnico <span class="text-blue">a domicilio</span></h2>
+      <p class="section-desc">
+        Reparamos, mantenemos y ponemos a punto el equipamiento de tu gimnasio sin que
+        tengas que moverlo. Vamos nosotros, en todo el Gran Mendoza.
+      </p>
+    </div>
+
+    <div class="service-split reveal">
+      <div class="service-split__media">
+        <img src="Imagenes/Maquinas-de-gimnasio-de-alta-tecnologia.jpg" alt="Sala de musculación con máquinas de fuerza rojas y negras" loading="lazy">
+      </div>
+      <ol class="process__steps">
+        <li>
+          <span class="step__num">01</span>
+          <div>
+            <h3>Nos contactás</h3>
+            <p>Nos escribís por WhatsApp o el formulario contándonos qué máquina falla o necesita mantenimiento.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step__num">02</span>
+          <div>
+            <h3>Diagnóstico</h3>
+            <p>Coordinamos una visita para diagnosticar el problema y te pasamos un presupuesto claro.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step__num">03</span>
+          <div>
+            <h3>Reparación in situ</h3>
+            <p>Realizamos la reparación o el mantenimiento directamente en tu gimnasio o box, a domicilio.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step__num">04</span>
+          <div>
+            <h3>Garantía del trabajo</h3>
+            <p>Cada intervención queda respaldada por garantía y seguimiento post servicio.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="coverage-block reveal">
+      <h3>Zona de cobertura: Gran Mendoza</h3>
+      <p>Brindamos servicio técnico a domicilio en los principales departamentos del Gran Mendoza:</p>
+      <div class="zones">
+        <div class="zone">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          <span>Ciudad de Mendoza</span>
+        </div>
+        <div class="zone">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          <span>Godoy Cruz</span>
+        </div>
+        <div class="zone">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          <span>Guaymallén</span>
+        </div>
+        <div class="zone">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          <span>Las Heras</span>
+        </div>
+        <div class="zone">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          <span>Maipú</span>
+        </div>
+        <div class="zone">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          <span>Luján de Cuyo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout--blue reveal">
+      <div>
+        <h3>¿Tu máquina dejó de funcionar?</h3>
+        <p>Contanos qué le pasa y coordinamos una visita técnica lo antes posible.</p>
+      </div>
+      <a href="#contacto" class="btn btn--primary">Solicitar servicio técnico</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POR QUÉ CONFÍAN EN GYMTECH =====
+     Nota para el cliente: esta sección reemplaza testimonios inventados por datos
+     verificables del servicio. En cuanto tengas reseñas reales de gimnasios o clientes,
+     lo ideal es reemplazar el bloque "trust-feature" y la lista por esas citas reales. -->
+<section class="section section--dark" id="confianza">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-feature reveal">
+        <h3>Garantía en cada intervención</h3>
+        <p>Toda reparación o mantenimiento que hacemos queda respaldado por garantía y seguimiento posterior, sin letra chica.</p>
+      </div>
+      <ul class="trust-list reveal">
+        <li>
+          <strong>Representantes oficiales Fox y Movement</strong>
+          <span>Venta y service con respaldo de fábrica.</span>
+        </li>
+        <li>
+          <strong>Servicio 100% a domicilio</strong>
+          <span>No movés tu equipo: vamos nosotros a tu gimnasio o box.</span>
+        </li>
+        <li>
+          <strong>Respuesta en 24 hs</strong>
+          <span>Coordinamos la visita técnica dentro del día siguiente a tu contacto.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Hablemos</p>
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-desc">
+        Contanos qué necesitás (equipamiento, accesorios o servicio técnico) y te
+        respondemos a la brevedad.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <form class="contact-form reveal" id="contact-form">
+        <div class="ticket-head">
+          <span>Solicitud de servicio</span>
+          <span>Gymtech</span>
+        </div>
+        <div class="form-row">
+          <label for="name">Nombre y apellido</label>
+          <input type="text" id="name" name="name" required placeholder="Tu nombre">
+        </div>
+        <div class="form-row">
+          <label for="phone">Teléfono / WhatsApp</label>
+          <input type="tel" id="phone" name="phone" required placeholder="Ej: 261 000-0000">
+        </div>
+        <div class="form-row">
+          <label for="motivo">Motivo de consulta</label>
+          <select id="motivo" name="motivo">
+            <option value="Equipamiento Fox">Equipamiento Fox</option>
+            <option value="Equipamiento Movement">Equipamiento Movement</option>
+            <option value="Servicio técnico a domicilio">Servicio técnico a domicilio</option>
+            <option value="Otra consulta">Otra consulta</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Contanos qué necesitás..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--whatsapp btn--full">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.5 7.7 9.3 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.2.8.9-3.1-.2-.3C3.9 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.3-8.5 8.3z"/></svg>
+          Enviar por WhatsApp
+        </button>
+      </form>
+
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <div class="info-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.5 7.7 9.3 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.2.8.9-3.1-.2-.3C3.9 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.3-8.5 8.3z"/></svg>
+          </div>
+          <div>
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/5492610000000" target="_blank" rel="noopener">+54 9 261 000-0000</a></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:gymtech@gmail.com">gymtech@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          </div>
+          <div>
+            <h4>Zona de cobertura</h4>
+            <p>Gran Mendoza, Argentina</p>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="Imagenes/Logo GYMTechRecortado.jpeg" alt="Gymtech" class="footer__logo">
+      <p>Servicio, ventas y equipos para potenciar tu gimnasio. Representantes oficiales de Fox
+        y Movement en el Gran Mendoza.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#fox">Equipos Fox</a></li>
+        <li><a href="#servicio">Servicio Técnico</a></li>
+        <li><a href="#movement">Movement</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/5492610000000" target="_blank" rel="noopener">+54 9 261 000-0000</a></li>
+        <li><a href="mailto:gymtech@gmail.com">gymtech@gmail.com</a></li>
+        <li>Gran Mendoza, Argentina</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; <span id="year"></span> Gymtech. Todos los derechos reservados.</p>
+    <p>Representantes oficiales FOX · MOVEMENT</p>
+  </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/5492610000000?text=Hola%20Gymtech%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.5 7.7 9.3 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.2.8.9-3.1-.2-.3C3.9 14.9 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.3-8.5 8.3z"/></svg>
+</a>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
