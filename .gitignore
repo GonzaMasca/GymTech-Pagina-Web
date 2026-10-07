@@ -2,3 +2,18 @@ node_modules/
 .claude/
 Videos/hero-gymtech.mp4
 Videos/*Microsoft*.mp4
+
+# Material de referencia / backups: no los usa la página en el navegador
+backup-original/
+FireShot/
+Prototipo Inicial GymTech.pdf
+DESIGN.md
+
+# Imágenes sin referenciar en index.html / style.css
+Imagenes/favicon-512.png
+Imagenes/favicon.png
+Imagenes/logo-icon.png
+Imagenes/servicio-tecnico-isla3.png
+Imagenes/logo-DeporAR.jpeg
+Imagenes/Logo GYMTech.jpeg
+Imagenes/logo.jpeg
