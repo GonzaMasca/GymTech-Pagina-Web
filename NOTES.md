@@ -39,7 +39,12 @@ contacto y footer.
 - **Servicio técnico**: pasos (contacto → diagnóstico → reparación in
   situ → garantía) y zona de cobertura (Gran Mendoza).
 - **Formulario de contacto**: envía por WhatsApp (no hay backend).
-- **Footer** y **botón flotante de WhatsApp**.
+- **Footer** y **botón flotante de contacto**: al tocarlo despliega dos
+  opciones, WhatsApp y Email (`mailto:gymtech@gmail.com`). Se cierra con
+  la X, tocando afuera o con Escape.
+- **Menú móvil (hamburguesa)**: oscurece el resto de la pantalla y se
+  cierra tocando cualquier lugar fuera del panel, con la X o eligiendo
+  una sección.
 
 ## Pendientes conocidos
 

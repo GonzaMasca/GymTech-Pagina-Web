@@ -1,7 +1,7 @@
 /* =========================================================
    GYMTECH — script.js
    Menú móvil, scroll header, nav activo, reveal on scroll,
-   formulario -> WhatsApp, back to top
+   contacto flotante (WhatsApp / Email), formulario -> WhatsApp, back to top
    ========================================================= */
 (function () {
   'use strict';
@@ -41,25 +41,36 @@
   /* ---------- Menú móvil (hamburguesa) ---------- */
   var hamburger = document.getElementById('hamburger');
   var nav = document.getElementById('nav');
+  var navBackdrop = document.getElementById('nav-backdrop');
 
-  function closeMenu() {
-    if (!nav) return;
-    nav.classList.remove('is-open');
-    hamburger.classList.remove('is-active');
-    hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+  function setMenu(open) {
+    if (!nav || !hamburger) return;
+    nav.classList.toggle('is-open', open);
+    hamburger.classList.toggle('is-active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    if (navBackdrop) navBackdrop.classList.toggle('is-visible', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   }
+
+  function closeMenu() { setMenu(false); }
 
   if (hamburger && nav) {
     hamburger.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('is-open');
-      hamburger.classList.toggle('is-active', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      setMenu(!nav.classList.contains('is-open'));
     });
 
     nav.querySelectorAll('.nav__link').forEach(function (link) {
       link.addEventListener('click', closeMenu);
+    });
+
+    // Tocar en cualquier lugar fuera del menú lo cierra. El fondo oscuro
+    // tiene su propio listener porque iOS no siempre propaga el toque
+    // de un elemento no interactivo hasta document.
+    if (navBackdrop) navBackdrop.addEventListener('click', closeMenu);
+    document.addEventListener('click', function (e) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(e.target) || hamburger.contains(e.target)) return;
+      closeMenu();
     });
 
     document.addEventListener('keydown', function (e) {
@@ -109,6 +120,38 @@
   if (backToTop) {
     backToTop.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- Botón flotante de contacto (WhatsApp / Email) ---------- */
+  var floatContact = document.getElementById('float-contact');
+  var floatToggle = document.getElementById('float-contact-toggle');
+
+  function setFloatMenu(open) {
+    if (!floatContact || !floatToggle) return;
+    floatContact.classList.toggle('is-open', open);
+    floatToggle.setAttribute('aria-expanded', String(open));
+    floatToggle.setAttribute('aria-label', open ? 'Cerrar opciones de contacto' : 'Abrir opciones de contacto');
+  }
+
+  if (floatContact && floatToggle) {
+    floatToggle.addEventListener('click', function () {
+      setFloatMenu(!floatContact.classList.contains('is-open'));
+    });
+
+    floatContact.querySelectorAll('.float-contact__option').forEach(function (option) {
+      option.addEventListener('click', function () { setFloatMenu(false); });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (floatContact.classList.contains('is-open') && !floatContact.contains(e.target)) setFloatMenu(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' || !floatContact.classList.contains('is-open')) return;
+      var focusInside = floatContact.contains(document.activeElement);
+      setFloatMenu(false);
+      if (focusInside) floatToggle.focus();
     });
   }
 
