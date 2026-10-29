@@ -357,6 +357,14 @@ html.reduced-motion .hero__poster-fallback { display: block; }
 .section-title__logo { height: 1.3em; width: auto; border-radius: 6px; }
 .section-desc { color: var(--grey-300); font-size: 1.02rem; max-width: 640px; }
 
+/* Próximamente: tarjeta azul que anuncia el servicio técnico a domicilio */
+.soon {
+  padding: 2.6rem 2.4rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(120deg, rgba(30,95,216,.16), rgba(30,95,216,.03));
+  border: 1px solid rgba(30,95,216,.3);
+}
+
 /* ===== CARRUSEL (Fox / Movement) ===== */
 .carousel { position: relative; }
 .carousel__track {
@@ -571,7 +579,7 @@ html.reduced-motion .hero__poster-fallback { display: block; }
   display: flex; align-items: center; justify-content: center;
   background: rgba(30,95,216,.14); color: var(--blue-300);
 }
-.info-card__icon svg { width: 22px; height: 22px; }
+.info-card__icon svg { width: 22px; height: 22px; fill: currentColor; } /* el ícono de WhatsApp es relleno: toma el mismo celeste que los de contorno */
 .info-card h4 { font-family: var(--font-body); font-weight: 700; font-size: .8rem; text-transform: uppercase; color: var(--grey-500); margin-bottom: .2rem; letter-spacing: .04em; }
 .info-card p { font-size: .95rem; color: var(--white); font-weight: 600; }
 .info-card a:hover { color: var(--blue-300); }
@@ -729,6 +737,7 @@ html.reduced-motion .hero__poster-fallback { display: block; }
   .about__pillars { grid-template-columns: 1fr; }
   .back-to-top { right: 1.6rem; bottom: calc(5.4rem + env(safe-area-inset-bottom, 0px)); }
   .section { padding: 3.5rem 0; }
+  .soon { padding: 2rem 1.4rem; }
   .brand__logo { height: 44px; }
 }
 
