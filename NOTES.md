@@ -35,8 +35,15 @@ siguen en `style.css` para que reactivarlos sea volver a pegar el HTML.
 
 ## Estructura de contenido del sitio (`index.html`)
 
-- **Hero**: video de fondo `Videos/hero-gymyech1.mp4` (3.6 MB, con poster
-  de imagen si el navegador tiene `prefers-reduced-motion` activado).
+- **Hero**: video de fondo `Videos/hero-gymtech-1080.mp4` (1920×1080,
+  H.264, 4.3 MB, sin audio, con el índice al inicio para que arranque
+  rápido), con poster de imagen si el navegador tiene
+  `prefers-reduced-motion` activado. Se generó con ffmpeg desde la fuente
+  original `Videos/hero-gymtech.mp4` (1080p en H.265, 16.6 MB, que Chrome,
+  Edge y Firefox no reproducen de forma confiable):
+  `ffmpeg -i hero-gymtech.mp4 -an -c:v libx264 -preset slow -crf 24 -profile:v high -level 4.0 -pix_fmt yuv420p -color_primaries bt709 -color_trc bt709 -colorspace bt709 -movflags +faststart hero-gymtech-1080.mp4`.
+  Se usa el mismo archivo en celular: en vertical el video cubre toda la
+  altura de la pantalla, así que una versión de 720p se vería peor.
 - **Catálogo Fox** (`Imagenes/fox/`): Cinta Runner PRO, Bicicleta Fija
   FX-55, Prensa 45°, Súper Squat, Sillón de Cuádriceps FX-MAX, Multipress
   Rotativo FX. Termina con tarjeta "Catálogo completo Fox" + botón de
@@ -67,16 +74,7 @@ siguen en `style.css` para que reactivarlos sea volver a pegar el HTML.
    preloader, el footer y como imagen al compartir el link. Mientras el
    servicio no exista, conviene que el cliente decida si usar una versión
    del logo sin esa leyenda.
-3. **Video sin usar**: `Videos/hero-gymtech.mp4` (16.6 MB) quedó
-   reemplazado por `hero-gymyech1.mp4` y no se usa. No se subió al repo
-   (ver `.gitignore`).
-4. **Nombre de archivo con typo**: `hero-gymyech1.mp4` (dice "yech" en vez
-   de "tech"). Se dejó así a propósito para no romper el link; renombrar
-   si se quiere prolijidad.
-5. **Calidad del video**: es 1024×576, se ve algo blando en pantallas
-   grandes (el degradado oscuro del hero lo disimula). Ideal: 1920×1080
-   de peso similar.
-6. **Video con `prefers-reduced-motion` apagado**: si el visitante tiene
+3. **Video con `prefers-reduced-motion` apagado**: si el visitante tiene
    desactivadas las animaciones del sistema, ve el poster en vez del
    video (comportamiento de accesibilidad intencional). Si se prefiere
    que casi todos vean el video igual, se puede agregar un botón de
@@ -88,7 +86,11 @@ Ver `.gitignore`:
 - `node_modules/` — se regenera con `npm install` (dependencia:
   `@playwright/test`, usada para verificar el sitio, no para producción).
 - `.claude/` — configuración local de Claude Code, no es parte del sitio.
-- `Videos/hero-gymtech.mp4` — video viejo sin uso (16.6 MB).
+- `Videos/hero-gymtech.mp4` — fuente original en H.265 (16.6 MB); la
+  página usa la versión convertida `hero-gymtech-1080.mp4`.
+- `Videos/hero-gymyech1.mp4` — video anterior del hero (1024×576). Ya no
+  lo usa `main`; sigue en la rama `version-completa-servicio-tecnico` y en
+  el backup local.
 - `BACKUP-VERSION-COMPLETA-SERVICIOTECN/` — copia local de la versión con
   servicio técnico; en el repo esa versión está en la rama
   `version-completa-servicio-tecnico`.
